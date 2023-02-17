@@ -59,9 +59,9 @@ function guardarDatos() {
   window.location.replace("index.html");
 }
 
-function eliminarRegistro(registros) {
+function eliminarRegistro(idForm) {
     console.log("Pulsa eliminar registro")
-    let idEliminar = parseInt(document.getElementById('id').value);
+    let idEliminar = parseInt(document.getElementById('idForm').value);
     for (let i = 0; i < registros.length; i++) {
       if (registros[i].id === idEliminar) {
         registros.splice(i, 1);

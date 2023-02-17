@@ -25,7 +25,7 @@ if(tablaEst==null){
                     "<button type='button' class='btn btn-warning' onclick ='abrirForm ("+varEstudiante.idForm+")'>Editar</button>"
                     +"</td>";
                     dataFila+= "<td>" +
-                    "<button type='button' class='btn btn-danger' onclick='eliminarRegistro(registros)'>Eliminar</button>"
+                    "<button type='button' class='btn btn-danger' onclick='eliminarRegistro(idForm)'>Eliminar</button>"
                     +"</td>";
             dataFila+="<tr>";
         }
