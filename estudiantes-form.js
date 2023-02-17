@@ -65,16 +65,16 @@ function guardarDatos() {
 
 function eliminaRegistro(idForm){
     console.log("Presiona Eliminar");
-    document.getElementById('eliminar-btn').addEventListener('click', function() {
-        let idEliminar = parseInt(document.getElementById('id').value);
-        for (let i = 0; i < registros.length; i++) {
-            if (registros[i].id.toString() === idEliminar.toString()) {
-                registros.splice(i, 1);
-                actualizarRegistros(registros);
-                break;
-            }
-        }
-    });
+    let idEliminar = parseInt(document.getElementById('id').value);
+    for (let i = 0; i < registros.length; i++) {
+      if (registros[i].id === idEliminar) {
+        registros.splice(i, 1);
+        actualizarRegistros(registros);
+        break;
+      }
+    }
+    
+    
 
   }
 
