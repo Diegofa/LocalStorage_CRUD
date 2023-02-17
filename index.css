@@ -1,0 +1,15 @@
+body{
+    font-family: 'Caveat', cursive;
+}
+
+.buttons{
+    width: 50px;
+    gap: 3em;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.container-fluid{
+    display: flex;
+    margin-left: 300px;
+}
