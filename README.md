@@ -1,2 +1,2 @@
 # LocalStorage_CRUD
-rRepositorio donde se hace manejo de CRUD para data en Local Storage
+Repositorio donde se hace manejo de CRUD para data en Local Storage
