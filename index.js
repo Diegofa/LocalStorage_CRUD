@@ -25,7 +25,7 @@ if(tablaEst==null){
                     "<button type='button' class='btn btn-warning' onclick ='abrirForm ("+varEstudiante.idForm+")'>Editar</button>"
                     +"</td>";
                     dataFila+= "<td>" +
-                    "<button type='button' class='btn btn-danger' onclick= 'eliminaRegistro()'>Eliminar</button>"
+                    "<button type='button' class='btn btn-danger' onclick='eliminarRegistro(registros)'>Eliminar</button>"
                     +"</td>";
             dataFila+="<tr>";
         }
@@ -38,7 +38,7 @@ if(tablaEst==null){
     localStorage.setItem("idForm", JSON.stringify(idForm));
     window.location.replace("estudiantes.html");
   }
-  
+
 
 
 
