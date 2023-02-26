@@ -61,16 +61,43 @@ function guardarDatos() {
 
 function eliminarRegistro(idForm) {
     console.log("Pulsa eliminar registro")
-    let idEliminar = parseInt(document.getElementById('idForm').value);
-    for (let i = 0; i < idForm.length; i++) {
-      if (idForm[i].id === idEliminar) {
-        idEliminar.splice(i, 1);
-        actualizarRegistros(idForm);
-        break;
-      }
-    }
-  }
+    let registros = JSON.parse(localStorage.getItem('registros'));
+    let indice = registros.findIndex(registros=> registro.idForm == idForm);
+    registros.splice(indice, 1);
+    localStorage.setItem('registros', JSON.stringify(registros));
+    mostrarRegistros();
 
-  function actualizarRegistros(){
     
   }
+
+  function mostrarRegistros() {
+    let registros = JSON.parse(localStorage.getItem('registros')) || [];
+    let registrosHtml = '';
+    for (let registro of registros) {
+      registrosHtml += `
+        <tr>
+          <td>${registro.nombre}</td>
+          <td>${registro.apellido}</td>
+          <td>${registro.email}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" onclick="eliminarRegistro('${registro.id}')">
+              Eliminar
+            </button>
+            <button class="btn btn-warning btn-sm" onclick="editarRegistro('${registro.id}')">
+              Editar
+            </button>
+          </td>
+        </tr>
+      `;
+    }
+    document.querySelector('#registros').innerHTML = registrosHtml;
+  }
+ 
+  
+  
+  
+  
+  
+
+  }
+
