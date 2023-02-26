@@ -70,34 +70,4 @@ function eliminarRegistro(idForm) {
     
   }
 
-  function mostrarRegistros() {
-    let registros = JSON.parse(localStorage.getItem('registros')) || [];
-    let registrosHtml = '';
-    for (let registro of registros) {
-      registrosHtml += `
-        <tr>
-          <td>${registro.nombre}</td>
-          <td>${registro.apellido}</td>
-          <td>${registro.email}</td>
-          <td>
-            <button class="btn btn-danger btn-sm" onclick="eliminarRegistro('${registro.id}')">
-              Eliminar
-            </button>
-            <button class="btn btn-warning btn-sm" onclick="editarRegistro('${registro.id}')">
-              Editar
-            </button>
-          </td>
-        </tr>
-      `;
-    }
-    document.querySelector('#registros').innerHTML = registrosHtml;
-  }
- 
-  
-  
-  
-  
-  
-
-  }
 
